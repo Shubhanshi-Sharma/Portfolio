@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.portfolio-container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.nav-list{
+    display: flex;
+    gap: 3.5rem;
+    height: 15vh;
+    width: 100%;
+    justify-content: center;  /*to MAKE HORIZONTALLY CENTER*/
+    align-items: center;      /* to make VERTICALLY CENTER */
+    position: absolute;
+}
+
+/* TO REMOVE THE DOTS OF THE LIST WE HAVE TO CHOOSE LI TAG */
+.nav-list li{
+    list-style-type: none;
+}
+
+/* TO REMOVE THE UNDERLINES UNDER THE LIST ITEMS WE HAVE TO CHOOSE ANCHOR(a) TAG*/
+.nav-list li a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.nav-list li a:hover{
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    background: linear-gradient(-45deg,#22aafa, #262525);
+    border-radius: 0.5rem;
+}
+
+.left-container, .right-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
+.left-container{
+    background-color: #504d4d;
+    width: 70%;
+    padding-left: 3rem;
+}
+
+.right-container{
+    background: linear-gradient(-45deg,#22aafa,#504d4d 70%);
+    width: 30%;
+}
+
+.icons .fa-brands{
+    color: #bbb;
+    font-size: 1.7rem;
+}
+
+.icons .fa-brands:hover{
+    cursor: pointer;
+    transition: 0.5s ease-in;
+    background: linear-gradient(#fff, #22aafa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.content{
+    margin-left: 4rem;
+}
+
+.content .intro{
+    font-size: 1.5rem;
+    color: #fff;
+
+}
+
+.content .intro span{
+    color: #22aafa;
+}
+
+.content h1{
+    font-size: 4rem;
+    color: #22aafa;
+}
+
+.content .detail{
+    font-size: 1rem;
+    color: #fff;
+    max-width: 38rem;
+    margin: 1.1rem 0 3rem 0;
+    line-height: 1.8rem;
+}
+
+.btn-container button{
+    border: 0.1rem  solid #22aafa;
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+button:nth-child(1){
+    background: #22aafa;
+}
+
+button:nth-child(1):hover{
+    background: transparent;
+    color: #22aafa;
+}
+
+button:nth-child(2){
+    color: #22aafa;
+    background: #262525;
+    margin-left: 2rem;
+}
+
+button:nth-child(2):hover{
+    background: #22aafa;
+    color: #262525;
+}
+
+.design .circle{
+    aspect-ratio: 1;  /* aspect ratio:  means the height of circle 1 & circle 2 automatically gets same as 38rem & 30rem respectively or if we have defined the height then width gonna be set automatically */
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.circle:nth-child(1){
+    background: linear-gradient(90deg, #504d4d 50%, transparent 50%);
+    width: 38rem;
+}
+
+.circle:nth-child(2){
+    background: url(images/profile.jpg);
+    width: 30rem;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border: 0.7rem solid #fff;
+    box-shadow:
+    0 0 1rem #fff,
+    inset 0 0 1rem #fff,
+    0 0 2rem #22aafa,
+    inset 0 0 2rem #22aafa,
+    0 0 3rem #22aafa,
+    inset 0 0 3rem #22aafa;
+}
+
+/* ABOUT SECTION */
+#about{
+    margin: 1rem auto;
+    color: antiquewhite;
+    background: #504d4d;
+    justify-content: center;
+    display: flex;
+}
+
+pre{
+    text-align: center;
+}
+
+/* SKILLS SECTION */
+
+.section{
+    margin: 1rem 0 1rem 0;
+    background: #504d4d;
+    color: #22aafa;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 60vh;
+}
+
+h3{
+    margin-top: 2rem;
+}
+
+.skill-level{
+    background: white;
+    width: 100%;
+    height: .7rem;
+    margin-top: .7rem;
+    border-radius: 3rem;
+    position: relative;
+}
+
+
+.skill-bar-container{     /*TO SET THE CONTENT OF GRID IN CENTER MANUALLY*/
+    width: 60%;
+    margin: 0 4rem 0 9rem;
+}
+
+
+.skill-container{
+    margin: 5rem 6rem 0rem 6rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 6rem;
+    grid-row-gap: 2rem;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.skillbar{
+    background: #0a6faa;
+    position: absolute;
+    inset: 0;
+    border-radius: 3rem;
+}
+
+.html{
+    width: 80%;
+}
+
+.bootstrap{
+    width: 60%;
+}
+
+.css{
+    width: 78%;
+}
+
+.python{
+    width: 71%;
+}
+
+.javascript{
+    width:65%;
+}
+
+.msoffice{
+    width: 80%;
+}
+
+.left-container .design .circle{
+    aspect-ratio: 1;  /* aspect ratio:  means the height of circle 1 & circle 2 automatically gets same as 38rem & 30rem respectively or if we have defined the height then width gonna be set automatically */
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+
+.circle:nth-child(1){
+    background: linear-gradient(90deg,transparent 50%, #262525 50%);
+    width: 38rem;
+}
+
+.circle:nth-child(2){
+    background: url(images/profile.jpg);
+    width: 30rem;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border: 0.7rem solid #fff;
+    box-shadow:
+    0 0 1rem #fff,
+    inset 0 0 1rem #fff,
+    0 0 2rem #0a6faa,
+    inset 0 0 2rem #0a6faa,
+    0 0 4rem #0a6faa,
+    inset 0 0 4rem #0a6faa;
+}
+
+/* PROJECTS SECTION */
+section {
+    padding: 20px 0;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+
+.project {
+
+    margin: 20px 0;
+    padding: 15px;
+    border: 0px solid #504d4d;
+    border-radius: 5px;
+    background: #93DEFF;
+}
+
+
+/* CONTACT AND FOOTER SECTION */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
